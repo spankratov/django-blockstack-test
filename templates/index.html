@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blockstack Auth Test</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}">
+</head>
+<body style="background-image:url({% if cover %}{{cover}}{% else %}{% static 'background.png' %}{% endif %})">
+    <div class="main">
+        <div class="wrapper">
+            {% if request.user.is_authenticated %}
+                <h1 class="main-heading">Welcome, {{ request.user.first_name }} {{ request.user.last_name }}!</h1>
+                <img class="avatar" src="{{ avatar }}"><br/>
+                {% if github %}<p class="proof"><img class="icon" src="https://assets-cdn.github.com/favicon.ico"><a target="_blank" href="https://github.com/{{ github.identifier }}">{{ github.identifier }}</a><br/></p> {% endif %}
+                {% if facebook %}<p class="proof"><img src="https://www.facebook.com/rsrc.php/yl/r/H3nktOa7ZMg.ico"><a target="_blank" href="https://www.fb.com/{{ facebook.identifier }}">{{ facebook.identifier }}</a><br/></p> {% endif %}
+                {% if twitter %}<p class="proof"><img src="https://abs.twimg.com/favicons/favicon.ico"><a target="_blank" href="https://twitter.com/{{ twitter.identifier }}">{{ twitter.identifier }}</a><br/></p> {% endif %}
+                <p><a href="{% url 'logout' %}" class="btn">Sign out</a></p>
+            {% else %}
+                <h1 class="main-heading">Welcome, user!</h1>
+                <p><a href="{% url 'blockstack:request' %}" class="btn">Sign in</a></p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

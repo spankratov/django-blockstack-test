@@ -1,0 +1,68 @@
+html, body {
+    height: 100%;
+}
+
+.main {
+    height: 100%;
+    width: 100%;
+    display: table;
+}
+
+.wrapper {
+    text-align: center;
+    vertical-align: middle;
+    display: table-cell;
+    color: #fff;
+    height: 100%;
+}
+
+.wrapper h1 {
+    font-family: "Source Code Pro",monospace;
+    font-weight: 400;
+    font-size: 2.25rem;
+}
+.wrapper p {
+    font-family: "Source Code Pro",monospace;
+    font-weight: 400;
+    font-size: 1.25rem;
+}
+
+.wrapper p a {
+    color: white;
+}
+
+.proof a:visited {
+    color: #6d6e6f;
+}
+
+.proof a:hover {
+    color: aqua;
+}
+
+.avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.icon {
+    background-color: white;
+    border-radius: 50%;
+}
+
+.btn {
+    padding: 1.125rem 3.438rem;
+    border-color: #3e536f;
+    background-color: #3e536f;
+    font-size: 0.9375rem;
+    font-family: "Source Code Pro",monospace;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    border-color: crimson;
+    background-color: crimson;
+}
