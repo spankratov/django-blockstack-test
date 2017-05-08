@@ -28,7 +28,13 @@ html, body {
 }
 
 .wrapper p a {
-    color: white;
+    color: aqua;
+    text-decoration: none;
+}
+
+.proof img {
+    vertical-align: middle;
+    margin-right: 2px;
 }
 
 .proof a:visited {
@@ -37,6 +43,7 @@ html, body {
 
 .proof a:hover {
     color: aqua;
+    text-decoration: underline;
 }
 
 .avatar {
@@ -46,8 +53,9 @@ html, body {
 }
 
 .icon {
-    background-color: white;
     border-radius: 50%;
+    width: 35px;
+    height: 35px;
 }
 
 .btn {
